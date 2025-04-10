@@ -96,11 +96,11 @@ def main(
     )
 
     phi_model = AutoModelForCausalLM.from_pretrained(
-        "microsoft/Phi-3-mini-4k-instruct",
+        "microsoft/phi-2",
         quantization_config=bnb_config,
         device_map="auto"
     )
-    phi_tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct")
+    phi_tokenizer = AutoTokenizer.from_pretrained("microsoft/phi-2")
     
     # Add padding token if not present
     if phi_tokenizer.pad_token is None:

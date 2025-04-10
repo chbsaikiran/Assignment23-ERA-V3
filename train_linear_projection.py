@@ -67,7 +67,7 @@ def main(num_images=100, batch_size=32, num_epochs=50, learning_rate=1e-4, load_
     # Load models and processors
     siglip_model = SiglipVisionModel.from_pretrained("google/siglip-so400m-patch14-384")
     siglip_processor = AutoImageProcessor.from_pretrained("google/siglip-so400m-patch14-384")
-    tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct")
+    tokenizer = AutoTokenizer.from_pretrained("microsoft/phi-2")
 
     # Set padding token if not set
     if tokenizer.pad_token is None:
